@@ -68,7 +68,7 @@ function setupFilters(cars) {
 };
 
 function fillInSelectedCar() {
-  const orderButtons = document.querySelectorAll(".car-action .white-button");
+  const orderButtons = document.querySelectorAll(".button .white-button");
 
   const inputCar = document.querySelector("#car");
 
@@ -79,8 +79,9 @@ function fillInSelectedCar() {
       console.log(carTitle);
       if(inputCar && carItem) {
         inputCar.value = carTitle;
-        inputCar.readOnly = true;
-      };
+        inputCar.ariaReadOnly = true;
+      }
+      
     });
   });
 };

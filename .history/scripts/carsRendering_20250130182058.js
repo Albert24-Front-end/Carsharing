@@ -34,7 +34,6 @@ function renderCars(cars) {
 
     container.appendChild(carElement);
   });
-  fillInSelectedCar();
 }
 
 function setupFilters(cars) {
@@ -67,26 +66,9 @@ function setupFilters(cars) {
   });
 };
 
-function fillInSelectedCar() {
-  const orderButtons = document.querySelectorAll(".car-action .white-button");
-
-  const inputCar = document.querySelector("#car");
-
-  orderButtons.forEach((button) => {
-    button.addEventListener('click', (event)=>{
-      const carItem = event.target.closest(".car");
-      const carTitle = carItem.querySelector(".car-details h4").textContent;
-      console.log(carTitle);
-      if(inputCar && carItem) {
-        inputCar.value = carTitle;
-        inputCar.readOnly = true;
-      };
-    });
-  });
-};
+function fillInSelectedCar()
 
 document.addEventListener("DOMContentLoaded", () => {
   renderCars(cars);
   setupFilters(cars);
-  fillInSelectedCar();
 });

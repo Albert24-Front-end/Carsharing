@@ -79,7 +79,7 @@ function fillInSelectedCar() {
       console.log(carTitle);
       if(inputCar && carItem) {
         inputCar.value = carTitle;
-        inputCar.readOnly = true;
+        inputCar.ariaReadOnly = true;
       };
     });
   });

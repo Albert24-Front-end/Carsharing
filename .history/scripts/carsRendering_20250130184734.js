@@ -68,22 +68,16 @@ function setupFilters(cars) {
 };
 
 function fillInSelectedCar() {
-  const orderButtons = document.querySelectorAll(".car-action .white-button");
+  const orderButtons = document.querySelectorAll(".button .white-button");
 
   const inputCar = document.querySelector("#car");
 
   orderButtons.forEach((button) => {
     button.addEventListener('click', (event)=>{
-      const carItem = event.target.closest(".car");
-      const carTitle = carItem.querySelector(".car-details h4").textContent;
-      console.log(carTitle);
-      if(inputCar && carItem) {
-        inputCar.value = carTitle;
-        inputCar.readOnly = true;
-      };
-    });
-  });
-};
+      
+    })
+  })
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   renderCars(cars);
